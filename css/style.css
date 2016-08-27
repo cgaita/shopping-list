@@ -12,7 +12,7 @@ body{
 	color: #A89594;
 }
 p{
-	width: 600px;
+	width: 550px;
 	height: 76px;
 	margin: auto;
 	margin-top: 35px;
@@ -46,6 +46,16 @@ h3{
 	color: #A89594;
 	width: 200px;
 }
+.fa-check-circle-o:hover{
+	color: #667561;
+}
+.fa-times-circle-o:hover{
+	color: #473432;
+}
+.cart-items .items .fa-check-circle-o{
+	color: #667561;
+}
+
 .entered-items{
 	position: relative;
     float: right;
