@@ -11,11 +11,14 @@ function init(){
 	}
 
 	$('.fa-plus-circle').on('click', function(event){
-		addItem(event);
+		//prevents empty entry
+		stopEmpty();
 	});
 	//to add using enter
 	$('.text-center').submit(function(event){
-	 	addItem(event);
+		//prevents empty entry
+		stopEmpty();
+	 	//addItem(event);
 	});
 	//moves items from list to cart using the check button
 	$('.col-md-6').on('click','.fa-check-circle-o', function(){
@@ -50,6 +53,14 @@ function init(){
 		//$(this).hide();
 		//$(this).children().wrap('<i id="done-item" class="fa fa-times-circle-o" aria-hidden="true"></i>');
 	});
+}
+//prevent empty entry
+function stopEmpty(){
+	if (!$('#search-bar').val()){
+			event.preventDefault();
+		} else{
+			addItem(event);
+		}
 }
 $(document).ready(function(){
 	init();	
